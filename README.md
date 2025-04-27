@@ -1,2 +1,6 @@
-# Satellite-Telementry-Pipeline
-The data engineering project will help me understand data engineering skills and improve my computer science fundamentals. 
+# Satellite-Telemetry-Pipeline
+
+This project simulates real-time aerospace telemetry data for spacecraft and aircraft. The goal is to ingest, store, and visualize
+Telemetry streams for educational purposes. 
+
+Tech Stack: Python, PostgreSQL, Docker, Streamlit
