@@ -2,7 +2,7 @@
 # Date: 4/27/25
 # Version 1: Create random data, will soon run real-time data
 
-import randomq
+import random
 import time
 
 def generate_random_telemetry():
