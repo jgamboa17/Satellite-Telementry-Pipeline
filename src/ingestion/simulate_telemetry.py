@@ -4,21 +4,21 @@
 
 import random
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 import csv
 import os
 import subprocess
 
 def generate_random_telemetry():
     telemetry_data = {
-        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "latitude": random.uniform(-90, 90),
-        "longitude": random.uniform(-180.0, 180.0),
-        "altitude_m": random.uniform(160.0, 40000.0), # meters
-        "velocity_m_s": 7800 + random.uniform(-50.0,50.0), # meters per second
-        "satellite_id" : random.uniform(0, 10.0), # randrom satellite ID, once data is implemented, will have a real ID
-        "battery_level_percent" : random.uniform(20.0,100.0),
-        "temperature_celcius": random.uniform(-100.0, 100,0),
+        "satellite_id" : "SAT-118", # randrom satellite ID, once data is implemented, will have a real ID
+        "timestamp": datetime.now(timezone.utc),
+        "latitude": round(random.uniform(-90, 90), 2),
+        "longitude": round(random.uniform(-180, 180), 2),
+        "altitude_m": round(random.uniform(200, 400), 2), # meters
+        "velocity_m_s": round(random.uniform(6, 8),2 ), # meters per second
+        "battery_level_percent" : round(random.uniform(20, 100), 2),
+        "temperature_celcius": round(random.uniform(-100, 100), 2),
         "system_status": random.choice(["Nominal", "Warning", "Critical"])
 
     }
